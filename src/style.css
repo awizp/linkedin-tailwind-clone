@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+    /* custom colors */
+    --color-word: hsl(0, 0%, 10%);
+    --color-mute: hsl(0, 0%, 47%);
+    --color-border: hsl(0, 0%, 66%);
+    --color-light-bg: hsl(0, 0%, 95%);
+    --color-pale-bg: hsl(40, 21%, 95%);
+    --color-blue: hsl(210, 90%, 40%);
+    --color-dark-blue: hsl(210, 100%, 25%);
+    --color-gold: hsl(40, 78%, 54%);
+    --color-brown: hsl(36, 82%, 20%);
+
+    /* custom breakpoints */
+    --breakpoint-xlg: calc(1150/16 * 1rem);
+    --breakpoint-xs: calc(400/16 *1rem);
+
+    /* custom fonts */
+    --font-segoe-bold: 'Segoe UI bold', 'Noto Sans', sans-serif;
+    --font-segoe-normal: 'Segoe UI normal', 'Noto Sans', sans-serif;
+}
+
+@layer components {
+    .logo-svg {
+        @apply w-[41px] h-[41px] fill-current;
+    }
+
+    .i-svg {
+        @apply w-[20px] h-[20px] md:w-[25px] md:h-[25px] fill-current;
+    }
+
+    .anchor-link {
+        @apply w-full flex justify-center gap-0.5 text-word md:text-mute hover:text-word transition-colors cursor-pointer flex-col items-center text-xs md:text-sm;
+    }
+
+    .footer-anchor {
+        @apply text-sm text-word/80 hover:text-blue border-b border-transparent hover:border-blue cursor-pointer;
+    }
+}

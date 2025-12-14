@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+  <!-- tailwind css -->
+  <link rel="stylesheet" href="/src/style.css">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="/src/main.css">
+
+  <title>Feed | LinkedIn - Find your jobs in your preferred domain</title>
+</head>
+
+<body>
+  <!-- ***** header element ***** -->
+  <header class="header_section">
+
+    <!-- ***** navbar element ***** -->
+    <nav class="navbar_section layout_wrapper bg-white">
+      <div class="layout_container w-full flex items-center justify-between">
+
+        <div class="w-full flex items-center gap-4">
+
+          <!-- linkedin logo -->
+          <a href="https://www.linkedin.com/" class="logo-size cursor-pointer text-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+              class="mercado-match logo-svg" focusable="false">
+              <path
+                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+              </path>
+            </svg>
+          </a>
+
+          <!-- linkedin input -->
+          <div
+            class="hidden lg:flex w-fit gap-2 items-center text-mute hover:text-word border border-mute hover:border-word rounded-full p-1.5 px-2.5">
+            <ion-icon name="search" class="text-word font-bold"></ion-icon>
+            <input type="text" placeholder="Search" class="outline-0">
+          </div>
+
+          <!-- linkedin mobile & tablet input -->
+          <div>
+            <div class="w-full hidden xs:flex lg:hidden items-center">
+              <a href="#" class="anchor-link">
+                <ion-icon name="search" class="i-svg"></ion-icon>
+                <p>Search</p>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="w-full pl-5 flex items-center space-x-5">
+
+          <!-- linkedin lists -->
+          <div class="w-full flex items-center justify-center gap-3 md:gap-5 p-2 md:px-4">
+
+            <!-- home link -->
+            <div class="active-anchor w-full hidden xlg:flex items-center">
+              <a href="https://www.linkedin.com/feed/" class="anchor-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                  fill="currentColor" class="mercado-match i-svg" focusable="false">
+                  <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z"></path>
+                </svg>
+                <p>Home</p>
+              </a>
+            </div>
+
+            <!-- my network link -->
+            <div class="w-full hidden xlg:flex items-center">
+              <a href="https://www.linkedin.com/mynetwork/" class="anchor-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                  fill="currentColor" class="mercado-match i-svg" focusable="false">
+                  <path
+                    d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z">
+                  </path>
+                </svg>
+                <p class="flex items-center gap-1"><span>My</span> <span>Network</span></p>
+              </a>
+            </div>
+
+            <!-- jobs link -->
+            <div class="w-full hidden xlg:flex items-center">
+              <a href="https://www.linkedin.com/jobs/" class="anchor-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                  fill="currentColor" class="mercado-match i-svg" focusable="false">
+                  <path
+                    d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z">
+                  </path>
+                </svg>
+                <p>Jobs</p>
+              </a>
+            </div>
+
+            <!-- messages link -->
+            <div class="w-full hidden xlg:flex items-center">
+              <a href="https://www.linkedin.com/messaging/" class="anchor-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                  fill="currentColor" class="mercado-match i-svg" focusable="false">
+                  <path
+                    d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z">
+                  </path>
+                </svg>
+                <p>Messaging</p>
+              </a>
+            </div>
+
+            <!-- notifications link -->
+            <div class="flex w-full items-center">
+              <a href="https://www.linkedin.com/notifications/" class="anchor-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24"
+                  fill="currentColor" class="mercado-match i-svg"" focusable=" false">
+                  <path
+                    d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z">
+                  </path>
+                </svg>
+                <p>Notifications</p>
+              </a>
+            </div>
+
+            <!-- avatar link -->
+            <div class="w-full flex items-center">
+              <a href="#" class="anchor-link">
+                <div class="w-5.5 h-5.5 md:w-8 md:h-8 rounded-full overflow-hidden border border-mute">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D5603AQFJnKU3dy-10A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1688549235628?e=1767225600&v=beta&t=qM9Ztdoqfnt0bWpwS2SSvoX_GAroSWl_ig481DlbX5A"
+                    alt="avatar">
+                </div>
+                <p class="flex items-center gap-1"><span>Me</span> <span><ion-icon name="caret-down"></ion-icon></span>
+                </p>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- linkedin premium -->
+          <div class="hidden sm:flex w-full items-center p-2 px-4 gap-4 border-l border-mute/20">
+            <div class="anchor-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+                class="mercado-match i-svg" focusable="false">
+                <path
+                  d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z">
+                </path>
+              </svg>
+
+              <p class="flex items-center gap-1"><span>Premium</span> <span><ion-icon
+                    name="caret-down"></ion-icon></span></p>
+            </div>
+
+            <a href="http://www.linkedin.com/premium/"
+              class="flex w-full flex-col items-center text-xs md:text-sm text-amber-700 hover:text-brown cursor-pointer transition-colors">
+              <p class="flex items-center gap-1 border-b border-amber-700">
+                <span>Activate</span>
+                <span>Premium</span>
+              </p>
+              <p class="flex items-center gap-1 border-b border-amber-700">
+                <span>50%</span>
+                <span>Off</span>
+              </p>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ***** main element ***** -->
+  <main class="main_section w-full">
+    <section class="w-full feed_section layout_wrapper">
+      <div class="w-full layout_container py-8">
+
+        <!-- devided feed section into three parts -->
+        <div
+          class="w-full grid grid-cols-1 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_2fr_1fr] gap-10 place-content-center">
+
+          <!-- profile section -->
+          <section class="profile_section w-full flex flex-col gap-4">
+
+            <!-- profile card with picture, details and banner -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col overflow-hidden bg-white">
+              <div class="w-full relative">
+                <div>
+                  <img src="/assets/img/banner.png" alt="Profile banner">
+                </div>
+
+                <div class="rounded-full overflow-hidden border-2 border-white absolute profile-image">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D5603AQFJnKU3dy-10A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1688549235628?e=1767225600&v=beta&t=qM9Ztdoqfnt0bWpwS2SSvoX_GAroSWl_ig481DlbX5A"
+                    alt="Profile Avatar">
+                </div>
+
+                <div class="bg-white w-full h-14"></div>
+              </div>
+
+              <div class="px-3 text-xs md:text-sm pb-4">
+                <p class="font-segoe-bold text-word/90 text-2xl cursor-pointer">Vishnuprakash R</p>
+                <p class=" cursor-pointer">Fullstack Enginner | BE</p>
+                <p class="text-mute cursor-pointer">Coimbatore, Tamilnadu</p>
+              </div>
+
+              <a href="https://www.linkedin.com/in/awizp/" class="px-3 pb-4 flex items-center gap-2 text-xs md:text-sm">
+                <div class="w-8 h-8 rounded overflow-hidden">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D560BAQFI_zxYO6fHfQ/company-logo_100_100/company-logo_100_100/0/1690363278468/cyberdude_networks_logo?e=1767225600&v=beta&t=BkNuiZZ5Fw1uONtrdcl0J6N_78804U3qEqFXH5qr-5A"
+                    alt="Company avatar">
+                </div>
+                <p class="font-segoe-bold text-word/90">CyberDude Networks Private Limited</p>
+              </a>
+            </div>
+
+            <!-- profile viewers and impression -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col gap-2 overflow-hidden bg-white p-4">
+              <p class="flex justify-between cursor-pointer hover:underline text-sm text-word/80">
+                <span>Profile Viewers</span>
+                <span class="text-blue">65</span>
+              </p>
+              <p class="flex justify-between cursor-pointer hover:underline text-sm text-word/80">
+                <span>Profile impressions</span>
+                <span class="text-blue">729</span>
+              </p>
+            </div>
+
+            <!-- unlock insights & tools -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col gap-2 overflow-hidden bg-white p-4">
+              <p class="text-mute text-sm">Unlock exclusive tools & insights</p>
+              <a href="http://www.linkedin.com/premium/"
+                class="flex items-center gap-2 text-sm text-word/90 hover:text-blue">
+                <span><ion-icon name="prism" class="w-4 h-4 text-amber-600"></ion-icon></span>
+                <p>Activate Premium : 50% Off</p>
+              </a>
+            </div>
+
+            <!-- profile links -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col gap-2 overflow-hidden bg-white p-4">
+
+              <a href="https://www.linkedin.com/my-items/"
+                class="text-word/90 text-sm hover:underline flex items-center gap-2 font-segoe-bold">
+                <ion-icon name="bookmark"></ion-icon>
+                <p>Saved Jobs</p>
+              </a>
+
+              <a href="https://www.linkedin.com/groups/"
+                class="text-word/90 text-sm hover:underline flex items-center gap-2 font-segoe-bold">
+                <ion-icon name="people"></ion-icon>
+                <p>Gorups</p>
+              </a>
+
+              <a href="https://www.linkedin.com/mynetwork/network-manager/newsletters/"
+                class="text-word/90 text-sm hover:underline flex items-center gap-2 font-segoe-bold">
+                <ion-icon name="newspaper"></ion-icon>
+                <p>Newsletters</p>
+              </a>
+
+              <a href="https://www.linkedin.com/events/"
+                class="text-word/90 text-sm hover:underline flex items-center gap-2 font-segoe-bold">
+                <ion-icon name="scale" class="rotate-180"></ion-icon>
+                <p>Events</p>
+              </a>
+
+            </div>
+
+          </section>
+
+          <!-- feed group section -->
+          <section class="feed_section w-full flex flex-col gap-4">
+
+            <!-- feed create new post section -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col gap-4 overflow-hidden bg-white p-4">
+
+              <div class="flex items-center gap-2">
+                <div class="w-16 h-14 rounded-full overflow-hidden">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D5603AQFJnKU3dy-10A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1688549235628?e=1767225600&v=beta&t=drAdhprCsBjq2TnVqaJj3VCoENy2ZV0dUUMfm-97AHM"
+                    alt="Profile Avatar">
+                </div>
+
+                <input type="text" placeholder="Start a post"
+                  class="p-4 rounded-full w-full border border-mute text-word hover:bg-light-bg cursor-pointer placeholder:text-word/80 placeholder:hover:text-word font-segoe-bold">
+              </div>
+
+              <div class="w-full flex justify-around items-center">
+                <a href="#" class="flex items-center gap-2 hover:bg-gray-200 p-2 rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                    class="text-green-700 w-6 h-6">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2">
+                      <rect width="20" height="16" x="2" y="4" rx="4" />
+                      <path d="m15 12l-5-3v6z" />
+                    </g>
+                  </svg>
+                  <p>Video</p>
+                </a>
+
+                <a href="#" class="flex items-center gap-2 hover:bg-gray-200 p-2 rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                    class="text-blue-500 w-6 h-6">
+                    <path fill="currentColor"
+                      d="M6 17h12l-3.75-5l-3 4L9 13zm-3 4V3h18v18zm5.5-11q.625 0 1.063-.437T10 8.5t-.437-1.062T8.5 7t-1.062.438T7 8.5t.438 1.063T8.5 10" />
+                  </svg>
+                  <p>Photo</p>
+                </a>
+
+                <a href="#" class="flex items-center gap-2 hover:bg-gray-200 p-2 rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                    class="text-red-400 w-6 h-6">
+                    <path fill="currentColor" d="M3 21h18v-2H3zm6-4h12v-2H9zm-6-4h18v-2H3zm6-4h12V7H9zM3 3v2h18V3z" />
+                  </svg>
+                  <p>Write article</p>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- post sorting div -->
+            <div class="flex gap-2 items-center">
+              <div class="w-full bg-mute/20 h-0.5 rounded-full"></div>
+
+              <div class="flex items-center gap-1">
+                <p class="flex items-center gap-1 text-xs text-word/80"><span>Sort</span> <span>by:</span></p>
+                <p class="flex items-center gap-1 cursor-pointer text-sm"><span>Top</span><span><ion-icon
+                      name="caret-down"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+
+            <!-- feed actual post number 1 -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col gap-4 overflow-hidden bg-white p-4">
+
+              <!-- post profile -->
+              <div class="flex items-center gap-2">
+
+                <div class="w-16 h-16 overflow-hidden rounded-full">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D5603AQFJnKU3dy-10A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1688549235628?e=1767225600&v=beta&t=drAdhprCsBjq2TnVqaJj3VCoENy2ZV0dUUMfm-97AHM"
+                    alt="Post Profile">
+                </div>
+
+                <div class="flex flex-col gap-0.5">
+                  <p class="text-xl font-segoe-bold text-word/90"><span>Vishnuprakash R</span> <span
+                      class="text-mute text-sm">· You</span></p>
+                  <p class="text-xs text-mute flex items-center gap-1"><span>Full Stack Engineer</span> |
+                    <span>BE</span>
+                  </p>
+                  <p class="text-xs text-mute flex items-center gap-1"><span>21h</span>·
+                    <span class="text-sm text-word/80">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="fill-current"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="m11.8 19.987l.15-4.195L15 12.8h1.95v1.85l2.245.35q.271-.7.431-1.45t.16-1.55q0-2.225-1.093-4.043T15.8 5.089V8h-3v3h-2v3H8.775L6.8 11h-1v1l-1.736 1.975q.65 2.6 2.793 4.306t4.943 1.706m4-5.987h-3v-2h3zm0-6h2.025l-1.02 3h-2.03zm-3.997 13q-1.867 0-3.51-.708q-1.643-.709-2.859-1.924t-1.925-2.856t-.709-3.509t.709-3.51q.708-1.643 1.923-2.859t2.856-1.925T11.797 3t3.51.709q1.643.708 2.859 1.922t1.925 2.857t.709 3.509t-.708 3.51t-1.923 2.859t-2.857 1.925t-3.509.709" />
+                      </svg></span>
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- post content -->
+              <div class="text-word/90 font-segoe-normal flex flex-col gap-4">
+                <p>I built a BDevs Hosting landing page using CSS recently, focusing on refining layout behavior across
+                  different screen sizes.</p>
+
+                <p>This project was a good way to experiment with container queries and understand how components adapt
+                  in
+                  real responsive environments.</p>
+
+                <p>I tried to replicate React components based rendering in HTML to fetch pages as text and then
+                  rendered
+                  in another page but I faced the path issues for the assets which I have used in this website.</p>
+
+                <p>A simple build, but a useful exercise in improving my front end layout skills.</p>
+
+                <p><b class="font-segoe-bold text-word/90">Github Link:</b>
+                  <a class="text-blue border-b border-transparent hover:border-blue transition-colors"
+                    href="https://lnkd.in/gpiqkVN3">https://lnkd.in/gpiqkVN3</a>
+                </p>
+
+
+                <p><b class="font-segoe-bold text-word/90">Live demo:</b>
+                  <a class="text-blue border-b border-transparent hover:border-blue transition-colors"
+                    href="https://lnkd.in/gZfSgmUj">https://lnkd.in/gZfSgmUj</a>
+                </p>
+
+                <div class="border border-mute/20 rounded-xl p-1">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D5622AQFsepPu750aGw/feedshare-shrink_800/B56Zrp4DIjHQAg-/0/1764860375868?e=1767225600&v=beta&t=naWA1wQirqNzG0ND4QdiGgO4LWW2Yl6hPLuJcv9s1zI"
+                    alt="Post banner" class="rounded-xl">
+                </div>
+              </div>
+
+              <!-- post likes and comments -->
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-4 h-4 bg-blue p-1 rounded-full flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 20"
+                      class="text-white">
+                      <path fill="currentColor"
+                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2m6 10h3v10h-3z" />
+                    </svg>
+                  </div>
+
+                  <p class="text-sm text-mute">Anbuselvan Annamalai and 10 others</p>
+                </div>
+
+                <div class="w-full bg-mute/20 h-0.5 rounded-full"></div>
+
+                <!-- post action icons -->
+                <div class="flex items-center justify-around">
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20" class="w-5 h-5">
+                      <path fill="currentColor"
+                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2m6 10h3v10h-3z" />
+                    </svg>
+                    <p>Like</p>
+                  </a>
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="w-5 h-5">
+                      <g fill="none" stroke="currentColor" stroke-linejoin="round">
+                        <path stroke-linecap="round" stroke-width="2"
+                          d="M12 21a9 9 0 1 0-8-4.873L3 21l4.873-1c1.236.639 2.64 1 4.127 1" />
+                        <path stroke-width="3" d="M7.5 12h.01v.01H7.5zm4.5 0h.01v.01H12zm4.5 0h.01v.01h-.01z" />
+                      </g>
+                    </svg>
+                    <p>Comment</p>
+                  </a>
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="w-5 h-5">
+                      <path fill="currentColor"
+                        d="M8 20v1.932a.5.5 0 0 1-.82.385l-4.12-3.433A.5.5 0 0 1 3.382 18H18a2 2 0 0 0 2-2V8h2v8a4 4 0 0 1-4 4zm8-16V2.068a.5.5 0 0 1 .82-.385l4.12 3.433a.5.5 0 0 1-.321.884H6a2 2 0 0 0-2 2v8H2V8a4 4 0 0 1 4-4z" />
+                    </svg>
+                    <p>Repost</p>
+                  </a>
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="w-5 h-5">
+                      <path fill="currentColor" d="M21 3L3 10.53v.97l6.84 2.66L12.5 21h.96z" />
+                    </svg>
+                    <p>Share</p>
+                  </a>
+
+                </div>
+
+              </div>
+            </div>
+
+            <!-- feed actual post number 2 -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col gap-4 overflow-hidden bg-white p-4">
+
+              <!-- post profile -->
+              <div class="flex items-center gap-2">
+
+                <div class="w-16 h-16 overflow-hidden rounded-full">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D5603AQFJnKU3dy-10A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1688549235628?e=1767225600&v=beta&t=drAdhprCsBjq2TnVqaJj3VCoENy2ZV0dUUMfm-97AHM"
+                    alt="Post Profile">
+                </div>
+
+                <div class="flex flex-col gap-0.5">
+                  <p class="text-xl font-segoe-bold text-word/90"><span>Vishnuprakash R</span> <span
+                      class="text-mute text-sm">· You</span></p>
+                  <p class="text-xs text-mute flex items-center gap-1"><span>Full Stack Engineer</span> |
+                    <span>BE</span>
+                  </p>
+                  <p class="text-xs text-mute flex items-center gap-1"><span>21h</span>·
+                    <span class="text-sm text-word/80">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="fill-current"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="m11.8 19.987l.15-4.195L15 12.8h1.95v1.85l2.245.35q.271-.7.431-1.45t.16-1.55q0-2.225-1.093-4.043T15.8 5.089V8h-3v3h-2v3H8.775L6.8 11h-1v1l-1.736 1.975q.65 2.6 2.793 4.306t4.943 1.706m4-5.987h-3v-2h3zm0-6h2.025l-1.02 3h-2.03zm-3.997 13q-1.867 0-3.51-.708q-1.643-.709-2.859-1.924t-1.925-2.856t-.709-3.509t.709-3.51q.708-1.643 1.923-2.859t2.856-1.925T11.797 3t3.51.709q1.643.708 2.859 1.922t1.925 2.857t.709 3.509t-.708 3.51t-1.923 2.859t-2.857 1.925t-3.509.709" />
+                      </svg></span>
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- post content -->
+              <div class="text-word/90 font-segoe-normal flex flex-col gap-4">
+                <p>I recently completed a challenge where I built a responsive landing page for CyberDude Networks
+                  Private Limited using just HTML and CSS under Anbuselvan Annamalai mentorship.
+                </p>
+
+                <p>The project was based on a Figma design I worked with, which helped me stay true to the brand’s look
+                  and feel.</p>
+
+                <p>Here’s the tools I used:</p>
+
+                <ol>
+                  <li>1. HTML</li>
+                  <li>2. CSS</li>
+                </ol>
+
+                <p>I’m really happy with how it turned out, and it was a great way to dive deeper into frontend
+                  development.</p>
+
+                <p><b class="font-segoe-bold text-word/90">Github Link:</b>
+                  <a class="text-blue border-b border-transparent hover:border-blue transition-colors"
+                    href="https://lnkd.in/gXpFexBS">https://lnkd.in/gXpFexBS</a>
+                </p>
+
+
+                <p><b class="font-segoe-bold text-word/90">Live demo:</b>
+                  <a class="text-blue border-b border-transparent hover:border-blue transition-colors"
+                    href="https://lnkd.in/gnXPr5pE">https://lnkd.in/gnXPr5pE</a>
+                </p>
+
+                <div class="border border-mute/20 rounded-xl p-1">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D5622AQFWvlMROtRc9A/feedshare-shrink_800/B56Zq07GguJsAg-/0/1763971984796?e=1767225600&v=beta&t=wuNwy4l_QoRks9TtAtC_PdMVaroh_8UL6VhgpG3KirI"
+                    alt="Post banner" class="rounded-xl">
+                </div>
+              </div>
+
+              <!-- post likes and comments -->
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-4 h-4 bg-blue p-1 rounded-full flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 20"
+                      class="text-white">
+                      <path fill="currentColor"
+                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2m6 10h3v10h-3z" />
+                    </svg>
+                  </div>
+
+                  <p class="text-sm text-mute">Anbuselvan Annamalai and 10 others</p>
+                </div>
+
+                <div class="w-full bg-mute/20 h-0.5 rounded-full"></div>
+
+                <!-- post action icons -->
+                <div class="flex items-center justify-around">
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20" class="w-5 h-5">
+                      <path fill="currentColor"
+                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2m6 10h3v10h-3z" />
+                    </svg>
+                    <p>Like</p>
+                  </a>
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="w-5 h-5">
+                      <g fill="none" stroke="currentColor" stroke-linejoin="round">
+                        <path stroke-linecap="round" stroke-width="2"
+                          d="M12 21a9 9 0 1 0-8-4.873L3 21l4.873-1c1.236.639 2.64 1 4.127 1" />
+                        <path stroke-width="3" d="M7.5 12h.01v.01H7.5zm4.5 0h.01v.01H12zm4.5 0h.01v.01h-.01z" />
+                      </g>
+                    </svg>
+                    <p>Comment</p>
+                  </a>
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="w-5 h-5">
+                      <path fill="currentColor"
+                        d="M8 20v1.932a.5.5 0 0 1-.82.385l-4.12-3.433A.5.5 0 0 1 3.382 18H18a2 2 0 0 0 2-2V8h2v8a4 4 0 0 1-4 4zm8-16V2.068a.5.5 0 0 1 .82-.385l4.12 3.433a.5.5 0 0 1-.321.884H6a2 2 0 0 0-2 2v8H2V8a4 4 0 0 1 4-4z" />
+                    </svg>
+                    <p>Repost</p>
+                  </a>
+
+                  <a href="#" class="flex gap-2 items-center hover:bg-gray-300/70 p-2 rounded text-sm text-word/80">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="w-5 h-5">
+                      <path fill="currentColor" d="M21 3L3 10.53v.97l6.84 2.66L12.5 21h.96z" />
+                    </svg>
+                    <p>Share</p>
+                  </a>
+
+                </div>
+
+              </div>
+            </div>
+
+          </section>
+
+
+          <!-- ***** footer section ***** -->
+          <footer class="footer_section hidden lg:flex flex-col gap-4">
+
+            <!-- newsletter card -->
+            <div class="w-full rounded-2xl border border-mute/40 flex flex-col gap-2 overflow-hidden bg-white py-4">
+              <!-- newsletter title -->
+              <div class="w-full px-4 flex justify-between items-center">
+                <p class="font-segoe-bold text-2xl text-word/95">LinkedIn News</p>
+                <svg xmlns="http://www.w3.org/2000/svg" id="signal-notice-small" fill="currentColor"
+                  class="cursor-pointer" aria-hidden="true" data-supported-dps="16x16" viewBox="0 0 16 16"
+                  data-token-id="53" width="16" height="16"
+                  class="b8785f11 _7f2cd3ef _8eded5b8 a2bdd9a5 _8719af9d _5bd3b089" role="img" aria-label="">
+                  <path
+                    d="M12 2H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m-3 8v2H7.5A1.5 1.5 0 0 1 6 10.5a1.6 1.6 0 0 1 .1-.5l1.08-3h2.13l-1.09 3zm0-3.75A1.25 1.25 0 1 1 10.25 5 1.25 1.25 0 0 1 9 6.25">
+                  </path>
+                </svg>
+              </div>
+
+              <p class="w-full px-4  text-mute text-xl">Top stories</p>
+
+              <div class="w-full px-4 py-2 hover:bg-light-bg cursor-pointer text-sm">
+                <p class="font-segoe-bold text-word/90">Top Newsletters of the week</p>
+                <p class="text-mute"><span>2d ago</span> · <span>5232 Readers</span></p>
+              </div>
+
+              <div class="w-full px-4 py-2 hover:bg-light-bg cursor-pointer text-sm">
+                <p class="font-segoe-bold text-word/90">Silver prices hit ₹2 lakh</p>
+                <p class="text-mute"><span>2d ago</span> · <span>4032 Readers</span></p>
+              </div>
+
+              <div class="w-full px-4 py-2 hover:bg-light-bg cursor-pointer text-sm">
+                <p class="font-segoe-bold text-word/90">CyberDude Networks collabs with Google</p>
+                <p class="text-mute"><span>1d ago</span> · <span>3954 Readers</span></p>
+              </div>
+
+              <div class="w-full px-4 py-2 hover:bg-light-bg cursor-pointer text-sm">
+                <p class="font-segoe-bold text-word/90">AI bubble will crack among developers</p>
+                <p class="text-mute"><span>1d ago</span> · <span>3126 Readers</span></p>
+              </div>
+
+              <div
+                class="w-fit ml-4 px-4 py-2 hover:bg-light-bg cursor-pointer flex gap-2 rounded items-center text-sm text-mute">
+                <p>Show More</p>
+                <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+              </div>
+
+            </div>
+
+            <!-- linkedin footer links -->
+            <div class="w-full sticky top-0">
+
+              <!-- section links -->
+              <div class="flex flex-wrap gap-3 p-4 justify-center">
+                <a href="https://about.linkedin.com/" class="footer-anchor">About</a>
+                <a href="https://www.linkedin.com/accessibility/" class="footer-anchor">Accessibility</a>
+                <a href="https://www.linkedin.com/help/" class="footer-anchor">Help center</a>
+                <a href="https://www.linkedin.com/static?key=privacy_policy" class="footer-anchor">Privacy
+                  & Policy</a>
+                <a href="https://www.linkedin.com/help/linkedin/answer/62931?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BYLWZm2oYSK%2B95PMNkMGZyA%3D%3D"
+                  class="footer-anchor">Ad
+                  Choices</a>
+                <a href="https://www.linkedin.com/ad/start?trk=n_nav_ads_rr&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BYLWZm2oYSK%2B95PMNkMGZyA%3D%3D"
+                  class="footer-anchor">Advertising</a>
+                <a href="#" class="footer-anchor">Business services</a>
+                <a href="#" class="footer-anchor">Get the LinkedIn app</a>
+                <a href="#" class="footer-anchor">More</a>
+              </div>
+
+              <!-- copyright section -->
+              <div class="flex items-center gap-3 justify-center">
+                <div>
+                  <img src="/assets/img/linkedin.svg" alt="Company Logo">
+                </div>
+
+                <p class="text-sm text-word/90">LinkedIn Corporation © 2025</p>
+              </div>
+
+            </div>
+
+          </footer>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** ionic icons script ***** -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
